@@ -35,12 +35,13 @@
   text-align: center;
 }
 
-button{
+/* button{
   color: blue;
   font-size: 30px;
-}
+} */
 
-.score{
+.scoreUpdate{
+  padding-top: 1000px;
   font-size: 30px;
   padding-top: 100px;
   text-align: center;

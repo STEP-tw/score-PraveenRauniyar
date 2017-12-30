@@ -36,7 +36,7 @@ let animator=undefined;
 // };
 //
 const displayScore = function () {
-  document.getElementById("scoreUpdate").innerText = game.score;
+  document.getElementById("scoreUpdate").innerText = `Score : ${game.score}`;
 };
 
 const animateSnake=function() {
