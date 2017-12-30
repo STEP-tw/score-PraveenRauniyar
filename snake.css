@@ -25,6 +25,11 @@
   border-radius: 50%;
 }
 
+.super-food {
+  background-color: green;
+  border-radius: 50%;
+}
+
 #stopGame {
   font-size: 100px;
   text-align: center;

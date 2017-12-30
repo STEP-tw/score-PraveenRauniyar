@@ -15,8 +15,10 @@ Snake.prototype={
     this.head=this.head.next();
     return this.body.shift();
   },
-  grow:function() {
-    this.body.unshift(new Position(Infinity,Infinity,this.direction));
+  grow:function(growthFactor) {
+    for (var i = 0; i < growthFactor; i++) {
+      this.body.unshift(new Position(Infinity,Infinity,this.direction));
+    }
   },
   turnLeft:function() {
     this.head=this.head.turnLeft();
