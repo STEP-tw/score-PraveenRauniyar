@@ -52,7 +52,6 @@ const animateSnake=function() {
     game.addScore();
     displayScore();
   }
-  // stopGame(head);
 }
 
 const changeSnakeDirection=function(event) {
