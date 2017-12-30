@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Snake</title>
-    <link rel="stylesheet" href="snake.css">
-    <script src="src/utils.js" charset="utf-8"></script>
-    <script src="src/position.js" charset="utf-8"></script>
-    <script src="src/snake.js" charset="utf-8"></script>
-    <script src="src/draw.js" charset="utf-8"></script>
-    <script src="src/main.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div class="container" id="keys" tabindex="0">
-      <table class="game" id="grid">
 
-      </table>
-    </div>
-    <div id="hidden_tail">
+<head>
+  <meta charset="utf-8">
+  <title>Snake</title>
+  <link rel="stylesheet" href="snake.css">
+  <script src="src/utils.js" charset="utf-8"></script>
+  <script src="src/position.js" charset="utf-8"></script>
+  <script src="src/snake.js" charset="utf-8"></script>
+  <script src="src/draw.js" charset="utf-8"></script>
+  <script src="src/main.js" charset="utf-8"></script>
+  <script src="src/Game.js" charset="utf-8"></script>
+</head>
 
+<body>
+  <div class="container" id="keys" tabindex="0">
+    <table class="game" id="grid">
+
+    </table>
+  </div>
+  <div id="hidden_tail">
+    <div id="stopGame">
     </div>
-  </body>
+    <div class = "score">
+      <h2 id = "scoreUpdate"></h2>
+      <h1 id = "score"> Score </h1>
+    </score>
+      <button onclick="playAgain()">Play Again</button>
+    </div>
+  </div>
+</body>
+
 </html>

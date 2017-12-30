@@ -24,3 +24,19 @@
   background-color: blue;
   border-radius: 50%;
 }
+
+#stopGame {
+  font-size: 100px;
+  text-align: center;
+}
+
+button{
+  color: blue;
+  font-size: 30px;
+}
+
+.score{
+  font-size: 30px;
+  padding-top: 100px;
+  text-align: center;
+}
