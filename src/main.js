@@ -4,37 +4,37 @@ let numberOfRows=60;
 let numberOfCols=120;
 let animator=undefined;
 
-// const stopGame = function (head) {
-//   let xPosition = head.x;
-//   let yPosition = head.y;
-//   checkPositionsAndStopGame(xPosition,yPosition);
-// }
+const stopGame = function (head) {
+  let xPosition = head.x;
+  let yPosition = head.y;
+  checkPositionsAndStopGame(xPosition,yPosition);
+}
+
+const isXAxisEdgePosition = function (xPosition) {
+  return xPosition == 0 || xPosition == numberOfCols - 1;
+};
+
+const isYAxisEdgePosition = function (yPosition) {
+  return yPosition == 0 || yPosition == numberOfRows - 1;
+
+}
+
+const isAnyEdgePosition = function(xPosition,yPosition){
+  return isXAxisEdgePosition(xPosition) || isYAxisEdgePosition (yPosition);
+}
+
+const checkPositionsAndStopGame = function(xPosition,yPosition){
+  if(isAnyEdgePosition(xPosition,yPosition)||snake.isSnakeEatingItself()){
+    clearInterval(animator);
+    document.getElementById("game-Over").innerText ="Game Over";
+  }
+};
 //
-// const isXAxisEdgePosition = function (xPosition) {
-//   return xPosition == 0 || xPosition == numberOfCols;
-// };
-//
-// const isYAxisEdgePosition = function (yPosition) {
-//   return yPosition == 0 || yPosition == numberOfRows;
-//
-// }
-//
-// const isAnyEdgePosition = function(xPosition,yPosition){
-//   return isXAxisEdgePosition(xPosition) || isYAxisEdgePosition (yPosition);
-// }
-//
-// const checkPositionsAndStopGame = function(xPosition,yPosition){
-//   if(isAnyEdgePosition(xPosition,yPosition)||snake.isSnakeEatingItself()){
-//     clearInterval(animator);
-//     document.getElementById("stopGame").innerText ="Game Over";
-//   }
-// };
-// //
-// const playAgain = function () {
-//   document.getElementById("stopGame").innerText ="";
-//   location.reload();
-// };
-//
+const playAgain = function () {
+  document.getElementById("game-Over").innerText ="";
+  location.reload();
+};
+
 const displayScore = function () {
   document.getElementById("scoreUpdate").innerText = `Score : ${game.score}`;
 };
@@ -52,6 +52,7 @@ const animateSnake=function() {
     game.addScore();
     displayScore();
   }
+  stopGame(details.head);
 }
 
 const changeSnakeDirection=function(event) {

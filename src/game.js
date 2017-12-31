@@ -48,6 +48,7 @@ Game.prototype.move=function() {
   details.oldHead=this.snake.getHead();
   details.oldTail=this.snake.move();
   details.head=this.snake.getHead();
+  console.log(details.head);
   return details;
 }
 
@@ -56,8 +57,7 @@ Game.prototype.hasSnakeEatenFood=function() {
 }
 
 Game.prototype.createFood=function() {
-  // console.log(this.bottomRight);
-  console.log(3);
+  console.log(this.bottomRight);
   let position=generateRandomPosition(this.bottomRight.x,this.bottomRight.y);
 
   let random=generateRandomNumberBetween(0,10);
