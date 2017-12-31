@@ -7,11 +7,15 @@ const Game = function(topLeft, bottomRight) {
 }
 
 Game.prototype.addScore = function() {
+  if ((this.food.isSuperFood())) {
+    this.score += 50;
+  } else {
     this.score += 10;
+  }
 };
 
 Game.prototype.updateScore = function(head) {
-  if (this.snake.head.isSameCoordAs(this.food.getPosition())) {
+  if (this.hasSnakeEatenFood()) {
     this.addScore();
   };
 }
