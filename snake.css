@@ -1,5 +1,4 @@
 .whole-Page {
-  /* height: 600px; */
   width: 1200px;
 }
 
@@ -57,5 +56,9 @@
   font-weight: bold;
   text-align: center;
   color: red;
+}
 
+#restart-Button{
+  color: blue;
+  font-size: 30px;
 }
